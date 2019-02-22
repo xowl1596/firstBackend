@@ -1,0 +1,13 @@
+tr
+    td
+        =post[0].id
+    td
+        a(href=`/post?id=${post[0].id}`)
+            =post[0].title
+    td 
+        =post[0].writer
+    td
+        =post[0].time
+tr(colspan=4)
+    td
+        =post[0].content

@@ -1,0 +1,61 @@
+html, body{
+    margin : 0;
+}
+
+/* layout */
+.container{
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'nav    main   main   main   main   ad'
+        'footer footer footer footer footer footer';
+}
+
+.header{
+    grid-area: header;
+    background-color : powderblue;
+}
+
+.logo{
+    display : inline-block;
+}
+
+.header form{
+    display : inline-block;
+}
+
+.logo a img{
+    vertical-align: top;
+    width : 200px;
+    height : 100px;
+}
+
+.nav{
+    grid-area: nav;
+    background-color : palegoldenrod;
+}
+
+.main{
+    grid-area: main;
+    background-color : grey;
+}
+
+.board{
+    border : 1px solid black;
+    width : 100%;
+}
+
+.board th,td{
+    border : 1px solid black;
+}
+
+.ad{
+    grid-area: ad;
+    background-color : palegreen;
+}
+
+.footer{
+    grid-area: footer;
+    background-color : powderblue;
+}
+/* layout-end */

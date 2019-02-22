@@ -1,0 +1,42 @@
+html
+    head
+        style
+            include ../css/main.css
+    body
+        div(class="container")
+            div(class="header")
+                div(class="logo")
+                    a(href="/")
+                        img(src="logo.png")
+                -if (sess.nickName === undefined)
+                    include login_form.jade
+                -else
+                    include login_done.jade
+            div(class="nav")
+                ul 
+                    -for(var i = 0; i < menu.length; i++)
+                        li(class="nav-item")
+                            a(href=`/board?menu=${menu[i].menuCode}`)
+                                =menu[i].menuName
+            div(class="main")
+                table(class="board")
+                    -if(path === '/board')
+                        tr 
+                            th 글번호
+                            th 제목
+                            th 작성자
+                            th 작성날짜
+                        include list.jade
+                    -else if(path === '/post')
+                        tr 
+                            th 글번호
+                            th 제목
+                            th 작성자
+                            th 작성날짜
+                        include post.jade
+                    -else if(path === '/write')
+                        include write.jade
+            div(class="ad")
+                |광고다욧
+            div(class="footer")
+                |made by Psycho

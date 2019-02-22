@@ -1,0 +1,7 @@
+form(action="/write_done" method="post")
+    input(type="hidden" name="menu" value=`${menuType}`)
+    |제목
+    input(type="text" name="title")
+    |내용
+    input(type="textarea" name="content")
+    input(type="submit" value="완료")

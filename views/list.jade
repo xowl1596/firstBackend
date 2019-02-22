@@ -1,0 +1,14 @@
+-for(var i = 0; i < post.length; i++)
+    tr
+        td
+            =post[i].id
+        td
+            a(href=`/post?id=${post[i].id}`)
+                =post[i].title
+        td 
+            =post[i].writer
+        td
+            =post[i].time
+form(action="/write" method="get")
+    input(type="hidden" name="menu" value=`${menuType}`)
+    input(type="submit" value="글쓰기")
